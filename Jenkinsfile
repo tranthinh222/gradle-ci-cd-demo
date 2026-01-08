@@ -1,11 +1,9 @@
 pipeline {
-    agent {
-        dockerContainer {
-            image 'tranthinh123/jenkins-with-docker:latest'
-            args '-v /var/run/docker.sock:/var/run/docker.sock -u 0:0'
-        }
-    }
-
+    agent { 
+        node {
+            label 'docker-agent-java'
+            }
+      }
     stages {
         stage('Debug Docker') {
             steps {
