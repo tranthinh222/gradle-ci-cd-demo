@@ -3,6 +3,7 @@ pipeline {
         node {
             label 'docker-agent-java'
       }
+    }
     stages {
         stage('Pull source') {
             steps {
