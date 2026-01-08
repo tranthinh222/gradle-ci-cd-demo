@@ -2,8 +2,6 @@ pipeline {
     agent { 
         node {
             label 'docker-agent-java'
-            customWorkspace '/home/jenkins/agent_workspace/23120168'
-            }
       }
     stages {
         stage('Pull source') {
