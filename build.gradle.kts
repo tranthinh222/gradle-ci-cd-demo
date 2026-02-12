@@ -1,5 +1,6 @@
 plugins {
 	java
+	id("org.sonarqube") version "7.1.0.6387"
 	id("org.springframework.boot") version "4.0.1"
 	id("io.spring.dependency-management") version "1.1.7"
 }
@@ -27,4 +28,11 @@ dependencies {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "devsecops-demo"
+        property "sonar.projectName", "devsecops-demo"
+    }
 }
